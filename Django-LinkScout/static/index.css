@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a2e;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  justify-content: flex-start; /* Align content to the start (top) of the container */
+  align-items: center; /* Center items horizontally */
+  padding: 20px;
+}
+
+.h {
+  color: #4caf50;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+  font-size: 3em;
+}
+
+.firstHea {
+  text-align: center; /* Center align the paragraph */
+  margin-bottom: 30px; /* Adjust spacing */
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: #fff; /* Text color */
+  font-size: 1.2em; /* Font size */
+}
+
+.tab.active {
+  border-bottom: 2px solid #4caf50;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 80%; /* Adjust as needed */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+.footer a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  text-align: center;
+}
+.n {
+  display: flex;
+}
+
+#fileContent {
+  margin: 40px;
+}
+#urlContent {
+  margin: 40px;
+}
+#searchContent {
+  margin: 40px;
+}
+.panel4 {
+  background-color: #131a22;
+  height: 80px;
+  margin: 0;
+  color: white;
+
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.cond1 {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.cond2 {
+  padding-top: 10px;
+}
