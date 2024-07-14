@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Scanner</title>
+  <link rel="stylesheet" href="{% static 'index.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="h">LinkScout</h1>
+    <div class="firstHea">
+      <p>
+        Analyse suspicious files, domains, IPs and URLs to detect malware and
+        other breaches, automatically share them with the security community.
+      </p>
+    </div>
+    <div class="tabs">
+      <div class="tab">FILE</div>
+      <div class="tab active">URL</div>
+      <div class="tab">SEARCH</div>
+    </div>
+
+    <div class="n">
+      <div id="fileContent" class="tab-content hidden">
+        <!-- File content section -->
+        <h2>File Section</h2>
+        <div class="file-upload">
+          <input type="file" id="fileInput" />
+        </div>
+      </div>
+
+      <div id="urlContent" class="tab-content">
+        <!-- URL content section (active by default) -->
+        <h2>URL Section</h2>
+        <div class="search-box">
+          <form method="POST" action="{% url 'process_url_input' %}">
+            {% csrf_token %}
+            <input type="text" name="url_input" placeholder="Search or scan a URL" required />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>By submitting data above, you are agreeing to our</p>
+      <a href="#" style="color: #4caf50">Terms of Service</a> and to the
+      sharing of your URL submission with the security community. Please do
+      not submit any personal information; we are not responsible for the
+      contents of your submission.
+      <a href="#" style="color: #4caf50">Learn More</a>
+    </div>
+  </div>
+  <!-- <script src="{% static 'index.js' %}"></script> -->
+</body>
+</html>
